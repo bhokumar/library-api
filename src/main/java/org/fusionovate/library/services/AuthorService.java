@@ -21,4 +21,8 @@ public class AuthorService {
         }
         return authorRepository.addAuthor(author);
     }
+
+    public Author getAuthor(int authorId) {
+        return authorRepository.getAuthor(authorId);
+    }
 }

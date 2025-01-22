@@ -44,4 +44,15 @@ public class AuthorRepository {
         }
        return author;
     }
+
+    public Author getAuthor(int authorId) {
+        return jdbcTemplate.queryForObject("SELECT * FROM Author WHERE id = ?", new Object[]{authorId}, (rs, rowNum) -> {
+            Author author = new Author();
+            author.setId(rs.getInt("id"));
+            author.setName(rs.getString("name"));
+            author.setEmail(rs.getString("email"));
+            author.setDob(rs.getDate("birthdate").toLocalDate());
+            return author;
+        });
+    }
 }
