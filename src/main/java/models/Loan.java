@@ -1,17 +1,19 @@
 package models;
 
+import java.time.LocalDateTime;
+
 public class Loan {
     private int id;
     private int bookId;
     private int memberId;
-    private String issueDate;
-    private String dueDate;
-    private String returnDate;
+    private LocalDateTime issueDate;
+    private LocalDateTime dueDate;
+    private LocalDateTime returnDate;
 
     public Loan() {
     }
 
-    public Loan(int id, int bookId, int memberId, String issueDate, String dueDate, String returnDate) {
+    public Loan(int id, int bookId, int memberId, LocalDateTime issueDate, LocalDateTime dueDate, LocalDateTime returnDate) {
         this.id = id;
         this.bookId = bookId;
         this.memberId = memberId;
@@ -44,27 +46,27 @@ public class Loan {
         this.memberId = memberId;
     }
 
-    public String getIssueDate() {
+    public LocalDateTime getIssueDate() {
         return issueDate;
     }
 
-    public void setIssueDate(String issueDate) {
+    public void setIssueDate(LocalDateTime issueDate) {
         this.issueDate = issueDate;
     }
 
-    public String getDueDate() {
+    public LocalDateTime getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
+    public void setDueDate(LocalDateTime dueDate) {
         this.dueDate = dueDate;
     }
 
-    public String getReturnDate() {
+    public LocalDateTime getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDateTime returnDate) {
         this.returnDate = returnDate;
     }
 }

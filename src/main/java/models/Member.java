@@ -1,6 +1,6 @@
 package models;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Member {
     private int id;
@@ -8,12 +8,12 @@ public class Member {
     private String email;
     private String phone;
     private String address;
-    private LocalDate membershipDate;
+    private LocalDateTime membershipDate;
 
     public Member() {
     }
 
-    public Member(int id, String name, String email, String phone, String address, LocalDate membershipDate) {
+    public Member(int id, String name, String email, String phone, String address, LocalDateTime membershipDate) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -62,11 +62,11 @@ public class Member {
         this.address = address;
     }
 
-    public LocalDate getMembershipDate() {
+    public LocalDateTime getMembershipDate() {
         return membershipDate;
     }
 
-    public void setMembershipDate(LocalDate membershipDate) {
+    public void setMembershipDate(LocalDateTime membershipDate) {
         this.membershipDate = membershipDate;
     }
 }

@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS `Author` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(100) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
     `birthdate` DATE
 );
 
@@ -27,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `Loan` (
     `book_id` INT NOT NULL,
     `member_id` INT NOT NULL,
     `loan_date` DATE NOT NULL,
+    `due_date` DATE NOT NULL,
     `return_date` DATE,
     FOREIGN KEY (`book_id`) REFERENCES `Book`(`id`),
     FOREIGN KEY (`member_id`) REFERENCES `Member`(`id`)
