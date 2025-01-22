@@ -1,4 +1,4 @@
-package models;
+package org.fusionovate.library.models;
 
 import java.time.LocalDate;
 

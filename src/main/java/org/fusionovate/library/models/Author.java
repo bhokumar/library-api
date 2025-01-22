@@ -1,4 +1,6 @@
-package models;
+package org.fusionovate.library.models;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
@@ -6,6 +8,8 @@ public class Author {
     private int id;
     private String name;
     private String email;
+
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dob;
 
     public Author() {
